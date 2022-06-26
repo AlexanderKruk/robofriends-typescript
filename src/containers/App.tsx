@@ -33,7 +33,7 @@ class App extends React.Component<IAppProps, IAppState> {
       .then(users => {this.setState({ robots: users})});
   }
 
-  onSearchChange = (event) => {
+  onSearchChange = (event: React.FormEvent<HTMLInputElement>) => {
     this.setState({ searchfield: event.currentTarget.value })
   }
 

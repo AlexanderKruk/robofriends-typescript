@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-const SearchBox = ({ searchChange }) => {
+interface SearchBoxProps {
+  searchChange: (event: React.FormEvent<HTMLInputElement>) => void
+};
+
+const SearchBox = ({ searchChange }: SearchBoxProps) => {
   return (
     <div className='pa2'>
       <input
